@@ -17,6 +17,7 @@ export default function Button({
 }) {
   return (
     <TouchableOpacity
+      accessibilityLabel={testLabel}
       onPress={onPress}
       style={styles.button}
       testID={testLabel}

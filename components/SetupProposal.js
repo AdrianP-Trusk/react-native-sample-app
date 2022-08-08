@@ -29,6 +29,7 @@ export default function SetupProposal({
       <Text style={styles.subTitle}>BEST SETUP</Text>
       {proposalStack !== '' && (
         <Text
+          accessibilityLabel="proposal stack"
           style={styles.proposedTool}
           testID="proposal stack"
         >
@@ -37,6 +38,7 @@ export default function SetupProposal({
       )}
       {proposalToolTest !== '' && (
         <Text
+          accessibilityLabel="proposal test"
           style={styles.proposedTool}
           testID="proposal test"
         >
@@ -45,6 +47,7 @@ export default function SetupProposal({
       )}
       {proposalToolAPI !== '' && (
         <Text
+          accessibilityLabel="proposal api"
           style={styles.proposedTool}
           testID="proposal api"
         >
@@ -53,6 +56,7 @@ export default function SetupProposal({
       )}
       {proposalToolWEB !== '' && (
         <Text
+          accessibilityLabel="proposal web"
           style={styles.proposedTool}
           testID="proposal web"
         >
@@ -61,6 +65,7 @@ export default function SetupProposal({
       )}
       {proposalToolMOBILE !== '' && (
         <Text
+          accessibilityLabel="proposal mobile"
           style={styles.proposedTool}
           testID="proposal mobile"
         >
@@ -69,6 +74,7 @@ export default function SetupProposal({
       )}
       {proposalToolBONUS !== '' && (
         <Text
+          accessibilityLabel="proposal bonus"
           style={styles.proposedTool}
           testID="proposal bonus"
         >

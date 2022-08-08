@@ -19,6 +19,7 @@ export default function Select({
     <View style={styles.wrapper}>
       <Text style={styles.label}>{label}</Text>
       <Picker
+        accessibilityLabel={testLabel}
         selectedValue={selected}
         onValueChange={onChangeSelected}
         testID={testLabel}

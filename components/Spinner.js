@@ -9,7 +9,12 @@ import {ActivityIndicator, StyleSheet, View} from 'react-native';
 export default function Spinner({}) {
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" color="#00ff00" testID="spinner" />
+      <ActivityIndicator
+        accessibilityLabel="spinner"
+        color="#00ff00"
+        size="large"
+        testID="spinner"
+      />
     </View>
   );
 }

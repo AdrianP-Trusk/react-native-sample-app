@@ -16,7 +16,11 @@ export default function Checkbox({
   testLabel,
 }) {
   return (
-    <View style={styles.wrapper} testID={testLabel}>
+    <View
+      accessibilityLabel={testLabel}
+      style={styles.wrapper}
+      testID={testLabel}
+    >
       <BouncyCheckbox
         isChecked={value}
         onPress={onToggle}
