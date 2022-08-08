@@ -26,6 +26,7 @@ export default function Select({
       >
         {options.map((option) => (
           <Picker.Item
+            accessibilityLabel={`${testLabel} option ${option.value}`}
             key={option.key}
             label={option.label}
             value={option.value}
