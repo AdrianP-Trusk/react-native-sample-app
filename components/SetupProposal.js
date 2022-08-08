@@ -23,8 +23,9 @@ export default function SetupProposal({
 }) {
   return (
     <View
+      accessibilityLabel="proposal"
       style={styles.container}
-      testLabel="proposal"
+      testID="proposal"
     >
       <Text style={styles.subTitle}>BEST SETUP</Text>
       {proposalStack !== '' && (
