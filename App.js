@@ -10,6 +10,39 @@ import Spinner from './components/Spinner';
 import SetupProposal from './components/SetupProposal';
 import Button from './components/Button';
 
+const PROGRAMMING_LANGUAGES = {
+  NODE_JS: 'node-js',
+  JAVA: 'java',
+  PYTHON: 'python',
+};
+
+const TEST_FRAMEWORKS = {
+  JEST: 'jest',
+  PYTEST: 'pytest',
+  TESTNG: 'testng',
+};
+
+const API_LIBRARIES = {
+  AXIOS: 'axios',
+  REST_ASSURED: 'rest-assured',
+  REQUESTS: 'requests',
+};
+
+const BONUSES = {
+  BEHAVE: 'behave',
+  CUCUMBER: 'cucumber',
+};
+
+const WEB_LIBRARIES = {
+  SELENIUM_WEBDRIVER: 'selenium-webdriver',
+  WEBDRIVERIO: 'webdriverio',
+};
+
+const MOBILE_LIBRARIES = {
+  APPIUM: 'appium',
+  WEBDRIVERIO: 'webdriverio',
+};
+
 const stackOptions = [{
   key: '0',
   label: 'Choose...',
@@ -17,15 +50,15 @@ const stackOptions = [{
 }, {
   key: '1',
   label: 'Node.js',
-  value: 'node-js',
+  value: PROGRAMMING_LANGUAGES.NODE_JS,
 }, {
   key: '2',
   label: 'JAVA',
-  value: 'java',
+  value: PROGRAMMING_LANGUAGES.JAVA,
 }, {
   key: '3',
   label: 'Python',
-  value: 'python',
+  value: PROGRAMMING_LANGUAGES.PYTHON,
 }];
 
 /**
@@ -111,39 +144,39 @@ export default function App() {
     setProposalStack(devStack);
 
     setProposalToolTest({
-      'node-js': 'jest',
-      'java': 'testng',
-      'python': 'pytest',
+      [PROGRAMMING_LANGUAGES.NODE_JS]: TEST_FRAMEWORKS.JEST,
+      [PROGRAMMING_LANGUAGES.JAVA]: TEST_FRAMEWORKS.TESTNG,
+      [PROGRAMMING_LANGUAGES.PYTHON]: TEST_FRAMEWORKS.PYTEST,
     }[devStack]);
 
     if (mustAPI) {
       setProposalToolAPI({
-        'node-js': 'axios',
-        'java': 'rest-assured',
-        'python': 'requests',
+        [PROGRAMMING_LANGUAGES.NODE_JS]: API_LIBRARIES.AXIOS,
+        [PROGRAMMING_LANGUAGES.JAVA]: API_LIBRARIES.REST_ASSURED,
+        [PROGRAMMING_LANGUAGES.PYTHON]: API_LIBRARIES.REQUESTS,
       }[devStack]);
     }
 
     if (mustWEB) {
       setProposalToolWEB({
-        'node-js': 'webdriverio',
-        'java': 'selenium-webdriver',
-        'python': 'selenium-webdriver',
+        [PROGRAMMING_LANGUAGES.NODE_JS]: WEB_LIBRARIES.WEBDRIVERIO,
+        [PROGRAMMING_LANGUAGES.JAVA]: WEB_LIBRARIES.SELENIUM_WEBDRIVER,
+        [PROGRAMMING_LANGUAGES.PYTHON]: WEB_LIBRARIES.SELENIUM_WEBDRIVER,
       }[devStack]);
     }
 
     if (mustMOBILE) {
       setProposalToolMOBILE({
-        'node-js': 'webdriverio',
-        'java': 'appium',
-        'python': 'appium',
+        [PROGRAMMING_LANGUAGES.NODE_JS]: MOBILE_LIBRARIES.WEBDRIVERIO,
+        [PROGRAMMING_LANGUAGES.JAVA]: MOBILE_LIBRARIES.APPIUM,
+        [PROGRAMMING_LANGUAGES.PYTHON]: MOBILE_LIBRARIES.APPIUM,
       }[devStack]);
     }
 
     setProposalToolBONUS({
-      'node-js': 'cucumber-js',
-      'java': 'cucumber',
-      'python': 'behave',
+      [PROGRAMMING_LANGUAGES.NODE_JS]: BONUSES.CUCUMBER,
+      [PROGRAMMING_LANGUAGES.JAVA]: BONUSES.CUCUMBER,
+      [PROGRAMMING_LANGUAGES.PYTHON]: BONUSES.BEHAVE,
     }[devStack]);
   }
 

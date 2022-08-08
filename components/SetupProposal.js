@@ -40,7 +40,7 @@ export default function SetupProposal({
           style={styles.proposedTool}
           testID="proposal test"
         >
-            Stack: {proposalStack}
+            Test: {proposalToolTest}
         </Text>
       )}
       {proposalToolAPI !== '' && (
@@ -48,7 +48,7 @@ export default function SetupProposal({
           style={styles.proposedTool}
           testID="proposal api"
         >
-            Stack: {proposalStack}
+            API: {proposalToolAPI}
         </Text>
       )}
       {proposalToolWEB !== '' && (
@@ -56,7 +56,7 @@ export default function SetupProposal({
           style={styles.proposedTool}
           testID="proposal web"
         >
-            Stack: {proposalStack}
+            Web: {proposalToolWEB}
         </Text>
       )}
       {proposalToolMOBILE !== '' && (
@@ -64,7 +64,7 @@ export default function SetupProposal({
           style={styles.proposedTool}
           testID="proposal mobile"
         >
-            Stack: {proposalStack}
+            Mobile: {proposalToolMOBILE}
         </Text>
       )}
       {proposalToolBONUS !== '' && (
@@ -72,7 +72,7 @@ export default function SetupProposal({
           style={styles.proposedTool}
           testID="proposal bonus"
         >
-            Stack: {proposalStack}
+            BONUS: {proposalToolBONUS}
         </Text>
       )}
     </View>
